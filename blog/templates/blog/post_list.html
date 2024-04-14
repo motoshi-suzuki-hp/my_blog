@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>投稿一覧</h1>
+  {% for post in posts %}
+    <div>
+      <h2><a href="{% url 'blog:post_detail' post.pk %}">{{ post.title }}</a></h2>
+      <p>{{ post.content|truncatechars:100 }}</p>
+      <p>{{ post.created_at }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}
