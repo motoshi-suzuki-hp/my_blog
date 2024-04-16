@@ -16,7 +16,8 @@ def post_create(request):
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save()
-            return redirect('post_detail', pk=post.pk)
+            print('==============================')
+            return redirect('../../', pk=post.pk)
     else:
         form = PostForm()
     return render(request, 'blog/post_form.html', {'form': form})
