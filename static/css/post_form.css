@@ -1,0 +1,29 @@
+.toggle_btn {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	background: #0052a4;
+	display: block;
+	width: 24px;
+	height: 24px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.toggle_btn:before, .toggle_btn:after {
+	display: block;
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.toggle_btn:before {
+	width: 2px;
+	height: 10px;
+}

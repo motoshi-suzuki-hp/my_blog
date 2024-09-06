@@ -1,13 +1,30 @@
 {% extends 'base.html' %}
+{% load static %} <!-- cssを読み込むための記述 -->
 
 {% block content %}
   <h1>投稿一覧</h1>
-  <a href="{% url 'blog:post_create' %}">新規投稿</a>
+
+  <div class="post_button">
+    <a href="{% url 'blog:post_create' %}"><span class="toggle_btn"></span></a>
+  </div>
+  
+  <ul class="post_list">
   {% for post in posts %}
-    <div>
-      <h2><a href="{% url 'blog:post_detail' post.pk %}">{{ post.title }}</a></h2>
+
+  <a href="{% url 'blog:post_detail' post.pk %}">
+    <li class="post_item">
+      <h2>{{ post.title }}</h2>
       <p>{{ post.content|truncatechars:100 }}</p>
       <p>{{ post.created_at }}</p>
-    </div>
+    
+    </li>
+</a>
   {% endfor %}
+  </ul>
 {% endblock %}
+
+<!-- cssを読み込むための記述 -->
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+{% endblock %}
+<!-- ここまで -->

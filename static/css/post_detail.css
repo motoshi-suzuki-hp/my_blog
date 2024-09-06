@@ -1,0 +1,82 @@
+/* reset.css */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ここまで */
+
+.post_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.post_list a {
+    width: 21vw;
+    height: 45vh;
+    border: solid 1px black;
+    border-radius: 10%;
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post_item {
+    /* width: 21vw;
+    height: 45vh;
+    border: solid 1px black;
+    border-radius: 10%;
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px; */
+}
+
+
+
+.post_button {
+    position: fixed;
+    right: 7vw;
+    bottom: 5vh;
+    /* border: solid 1px black; */
+    border-radius: 50%;
+    
+}
+
+.toggle_btn {
+	/* position: absolute;
+	top: 50%;
+	right: 1px; */
+	transform: translateY(-50%);
+	background: #0052a4;
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.toggle_btn:before, .toggle_btn:after {
+	display: block;
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.toggle_btn:before {
+	width: 4px;
+	height: 26px;
+}
+
+.toggle_btn:after {
+	width: 26px;
+	height: 4px;
+    
+}

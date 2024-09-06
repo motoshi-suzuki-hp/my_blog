@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
   <h1>新規投稿</h1>
   <form method="post">
@@ -7,4 +9,14 @@
     {{ form.as_p }}
     <button type="submit">投稿する</button>
   </form>
+
+  <div class="post_btn">
+    <a href="{% url 'blog:post_list' %}"><span class="toggle_btn"></span></a>
+  </div>
 {% endblock %}
+
+<!-- cssを読み込むための記述 -->
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+{% endblock %}
+<!-- ここまで -->

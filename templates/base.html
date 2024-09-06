@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %} <!-- 'static'タグを読み込む -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
     <title>My Blog</title>
 </head>
 <body>
